@@ -1,7 +1,7 @@
 class mkrHash {
 
     constructor(text){
-	    this.rangeWidth = 10;
+	this.rangeWidth = 10;
         this.key = '';
         this.i = 0;
         this.number = 0;
@@ -74,8 +74,6 @@ class mkrHash {
     }
     getHash(){
       let letters = this.text.split('');
-      console.log(letters);
-      console.log(this.gl_range.toString(), this.range_string);
       return this.gl_range.toString() + this.range_string + letters.map(el => this.alphabet_ranges[el] ? this.getRandomArbitrary(this.alphabet_ranges[el][0],this.alphabet_ranges[el][1]):'-').join('');
     }
     getKey(){
